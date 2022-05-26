@@ -2,8 +2,6 @@
 
 Profile card component using HTML, CSS web technologies.
 
-## ♢ You can check the website out from [HERE](https://moustf.github.io/preview-card-component/).
-
 ## ♢ User journey:
 
 - When the user first opens the website, he/she will find a pattern background and profile card.
