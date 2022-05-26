@@ -1,0 +1,180 @@
+:root {
+  --brightOrange: hsl(31, 77%, 52%);
+  --darkCyan: hsl(184, 100%, 22%);
+  --verydarkCyan: hsl(179, 100%, 13%);
+  --transparentWhite: hsla(0, 0%, 100%, 0.75);
+  --veryLightGray: hsl(0, 0%, 95%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lexend Deca", sans-serif;
+  color: var(--veryLightGray);
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 800px;
+  display: grid;
+  grid-template-columns: repeat(3, 100% / 3);
+  grid-template-areas: "sedan suv luxury";
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.title {
+  font-family: "Big Shoulders Display", cursive;
+}
+
+.card-one,
+.card-two,
+.card-three {
+  padding: 30px;
+}
+.card-one {
+  background-color: var(--brightOrange);
+  grid-area: sedan;
+}
+
+.card-two {
+  background-color: var(--darkCyan);
+  grid-area: suv;
+}
+
+.card-three {
+  background-color: var(--verydarkCyan);
+  grid-area: luxury;
+}
+
+.icons {
+  width: 60px;
+  height: 30px;
+  margin: 30px 0;
+}
+
+.container h1 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.container .card-p {
+  font-weight: 400;
+  font-size: small;
+  color: hsl(0, 30%, 90%);
+  line-height: 1.6;
+  margin-bottom: 60px;
+  line-height: 30px;
+}
+
+button {
+  background-color: #fff;
+  width: 120px;
+  height: 40px;
+  border: none;
+  border-radius: 2rem;
+  font-weight: bold;
+  font-size: small;
+  cursor: pointer;
+}
+
+.card-one button a {
+  color: var(--brightOrange);
+}
+.card-two button a {
+  color: var(--darkCyan);
+}
+.card-three button a {
+  color: var(--verydarkCyan);
+}
+
+.card-one button:hover {
+  background-color: var(--brightOrange);
+  border: 1px solid var(--veryLightGray);
+}
+
+.card-one button:hover a {
+  color: var(--veryLightGray);
+}
+.card-two button:hover {
+  background-color: var(--darkCyan);
+  border: 1px solid var(--veryLightGray);
+}
+.card-two button:hover a {
+  color: var(--veryLightGray);
+}
+.card-three button:hover {
+  background-color: var(--verydarkCyan);
+  border: 1px solid var(--veryLightGray);
+}
+.card-three button:hover a {
+  color: var(--veryLightGray);
+}
+
+a {
+  text-decoration: none;
+}
+
+p,
+button,
+.title {
+  color: #fff;
+}
+
+@media only screen and (max-width: 420px) {
+  .container {
+    grid-template-rows: repeat(3, 100% / 3);
+    grid-template-areas:
+      "sedan"
+      "suv"
+      "luxury";
+    margin: 20px;
+  }
+
+  .card-one,
+  .card-two,
+  .card-three {
+    height: 60vh;
+  }
+
+  .container h2 {
+    font-size: xx-large;
+  }
+
+  .container .card-p {
+    font-size: large;
+    line-height: 35px;
+    margin-bottom: 50px;
+  }
+
+  button {
+    width: 150px;
+    height: 50px;
+    border-radius: 2rem;
+  }
+
+  .attribution {
+    display: none;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: #000;
+  position: absolute;
+  bottom: 15px;
+  left: 40%;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
